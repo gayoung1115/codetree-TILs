@@ -8,7 +8,7 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int answer =1;
-        for(int i=2 ;i<=n;i++){
+        for(int i=2 ;i< = Math.min(n,m);i++){
 
             if(n%i==0 && m%i==0) answer = i;
         }
