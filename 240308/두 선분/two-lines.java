@@ -12,6 +12,7 @@ public class Main {
         boolean same =false;
         if(x2>y2){
             if(y1>=x1) same = true;
+            if(y2>=x1) same = true;
         }else{
             if(x2>=y1) same =true;
         }
