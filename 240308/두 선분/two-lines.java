@@ -18,5 +18,6 @@ public class Main {
         
 
         if(same) System.out.println("intersecting");
+        else  System.out.println("nonintersecting");
     }
 }
