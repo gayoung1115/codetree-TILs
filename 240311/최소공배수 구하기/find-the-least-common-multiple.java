@@ -8,13 +8,13 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
 
-        System.out.println(a*b*lcm(a,b));
+        System.out.println(a*b/lcm(a,b));
     }
-    public static void lcm(int a, int b){
+    public static int lcm(int a, int b){
         if(b==0){
             return a;
         }else{
-            gcd(b,a%b);
+            return lcm(b,a%b);
         }
     }
 }
