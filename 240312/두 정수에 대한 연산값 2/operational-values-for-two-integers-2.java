@@ -12,9 +12,15 @@ public class Main {
 
     }
     public static void year() { 
-      a +=10;
-      b *=2;
+      if(a<b) {
+        a+=10;
+        b*=2;
+      }else{
+        a *=2;
+        b+=10;
+      }
 
     }
+
 
 }
