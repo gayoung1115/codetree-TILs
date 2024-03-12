@@ -12,27 +12,20 @@ public class Main {
         System.out.print(sb);
      }
      public static int starM (int temp){
-        if(temp==0){
-            return starM(temp+1);
-        }
         for(int i=0;i<temp;i++){
-            sb.append("*");
-            if(i==temp-1) sb.append("\n");
+            sb.append("*"+" ");
         }
-        
-    
-        return starA(temp-1);
-        
-        
+        sb.append("\n");
+        if(temp==1) return starA(temp);
+        else return starM(temp-1);
      }
      public static int starA (int temp){
-        if(temp>n) return 0;
         for(int i=0;i<temp;i++){
-            sb.append("*");
-            if(i==temp-1) sb.append("\n");
+            sb.append("*"+" ");
         }
-
-        return starA(temp+1);
+        sb.append("\n");
+        if(temp==n) return 0;
+        else return starA(temp+1);
         
         
      }
