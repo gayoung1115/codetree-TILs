@@ -19,18 +19,17 @@ public class Main {
         if(r==0) return b;
         else return gcd(b, r);
     }
+    public static int lcm(int a, int b){
+        int g = gcd(a,b);
+        return a*b/g;
+    }
 
 
     public static int result(int []a){
-        if(a.length == 1) return a[0];
-        int m = gcd(a[0],a[1]);
-        int first = a[0]*a[1]/m ;
-        if(a.length>3){
-          for(int i=2 ;i<a.length;i++){
-            m = gcd(first, a[i]);
-            first = first*a[i] / m ;
-        }  
+        int lcmResult = a[0];
+        for(int i = 1; i < a.length; i++){
+            lcmResult = lcm(lcmResult, a[i]);
         }
-        return first;
+        return lcmResult;
     }
 }
