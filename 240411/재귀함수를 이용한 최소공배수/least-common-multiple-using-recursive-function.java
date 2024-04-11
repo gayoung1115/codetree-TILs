@@ -26,7 +26,7 @@ public class Main {
         int m = gcd(a[0],a[1]);
         int first = a[0]*a[1]/m ;
         if(a.length>3){
-          for(int i=2 ;i<(a.length);i++){
+          for(int i=2 ;i<a.length;i++){
             m = gcd(first, a[i]);
             first = first*a[i] / m ;
         }  
